@@ -1,0 +1,13 @@
+[ClassVersion("1.0.0"), FriendlyName("M3")]
+class M3: OMI_BaseResource
+{
+    [Key] String SomeKey;
+    [Read, EmbeddedInstance("Reason")] String Reasons;
+};
+
+[ClassVersion("1.0.0")]
+class Reason
+{
+     [Required] String Code;
+     [Required] String Phrase;
+};
